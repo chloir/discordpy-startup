@@ -16,4 +16,9 @@ async def ping(ctx):
     await ctx.send('pong')
 
 
+@bot.command()
+async def roll(ctx):
+    await ctx.send('Random Role')
+
+
 bot.run(token)
