@@ -36,6 +36,15 @@ async def roller_help(ctx):
     await ctx.send(help_text)
 
 
+@bot.command()
+async def five_roll(ctx):
+    role_list = ['Top', 'Jg', 'Mid', 'Adc', 'Sup']
+    random.shuffle(role_list)
+    await ctx.send('----Role List----')
+    for r in role_list:
+        await ctx.send(r)
+
+
 def role_roller():
     roll_index = random.randint(0, 1000)
     rolled_role = 'none'
